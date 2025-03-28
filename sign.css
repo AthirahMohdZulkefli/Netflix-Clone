@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* netflix logo */
+.banner {
+  padding: 20px;
+  width: 100vw;
+}
+
+a .netflix {
+  width: 175px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin-left: 25.069px;
+  margin-top: 7px;
+}
+
+.wrapper {
+  width: 420px;
+  background: rgba(0, 0, 0, .75);
+  height: 98vh;
+  backdrop-filter: blur(1px);
+  color: #fff;
+  border-radius: 5px;
+  padding: 100px 50px;
+  margin: 50px;
+}
+
+.wrapper h1 {
+  margin-bottom: 40px;
+  font-size: 32px;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 550;
+  text-align: left;
+}
+
+.input-box i {
+  position: relative;
+  display: flex;
+  margin-top: -40px;
+  margin-left: 270px;
+}
+
+form .input-box {
+  position: relative;
+  height: 50px;
+  margin-bottom: 16px;
+
+}
+
+.input-box input {
+  height: 100%;
+  width: 100%;
+  background: #333;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 4px;
+  padding: 0 20px;
+
+
+}
+
+.input-box label {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  color: grey;
+  font-size: 1rem;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.1s ease;
+}
+
+.input-box input:is(:focus, :valid)~label {
+  font-size: 0.75rem;
+  transform: translateY(-130%);
+}
+
+
+
+.wrapper .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  color: #ffffff9b;
+  margin: -15px 0 70px;
+}
+
+.remember-forgot label input {
+  accent-color: #fff;
+  margin-right: 3px;
+  margin-top: 35px;
+
+}
+
+.wrapper .btn {
+  display: inline-block; 
+  width: 100%; 
+  height: 45px;
+  font-family: 'Segoe UI', sans-serif; 
+  background: #d60b0b;
+  border: none; 
+  border-radius: 6px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer; 
+  font-size: 16px; 
+  color: #fff;
+  font-weight: 600;
+  text-align: center; 
+  text-decoration: none;
+  margin-top: 30px;
+  transition: background 0.3s ease; 
+  line-height: 45px;
+}
+
+.wrapper .btn:hover {
+  background: #b50a0a;
+}
+
+.wrapper .register-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+
+}
+
+.remember-forgot label {
+  font-size: 13px;
+  color: grey;
+}
+
+.remember-forgot a {
+  color: grey;
+  text-decoration: none;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 13px;
+  margin-top: 33px;
+
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.register-link {
+  display: inline;
+  color: grey;
+}
+
+.register-link p {
+  text-align: left;
+  font-size: 15px;
+}
+
+.register-link p a {
+  color: white;
+
+  text-decoration: none;
+  font-weight: 60px;
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
+}
+
+.register p {
+  font-size: 13px;
+  margin: 20px auto;
+}
+
+.register a {
+  font-size: 12px;
+  color: blue !important;
+}
+
+
+#video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#content {
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+}
+
+
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#netflix-logo {
+  display: none;
+}
+
+/* for small width device */
+
+@media screen and (max-width:650px) {
+
+  body {
+    background: black;
+    height: 100vh;
+    justify-content: space-between;
+  }
+
+  #video-container {
+    display: none;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+
+  }
+
+  #netflix-logo {
+    display: unset;
+    width: 100%;
+  }
+
+  #netflix-logo>img {
+    width: 30%;
+  }
+
+  #content {
+    width: 100%;
+  }
+
+  .wrapper {
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  .wrapper .input-box {
+    border-radius: 5px;
+  }
+
+  #input1 {
+    margin: 30px 0 20px 0;
+  }
+
+  #input2 {
+    margin: 20px 0 35px 0;
+  }
+
+  .input-box input {
+    border: none;
+  }
+
+  .wrapper h1 {
+    margin-top: unset;
+  }
+
+}
+
+@media(max-width: 767px) {
+  body {
+    background-color: #333;
+    background-image: none;
+  }
+
+  #netflix-logo {
+    display: none;
+  }
+
+  .banner img {
+    width: 120px;
+    position: fixed;
+  }
+
+  main {
+    margin: 40px;
+  }
+}

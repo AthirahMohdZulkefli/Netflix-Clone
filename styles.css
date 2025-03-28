@@ -1,0 +1,242 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: black;
+    color: white;
+}
+.page {
+    position: relative;
+    height: 100vh;
+    background: url('assets/background.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+.logo {
+    width: 150px;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.language-select {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+}
+.language-select option {
+    background: black;
+    color: white;
+}
+.sign-in {
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.page-content {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 800px;
+}
+.page-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.page-content h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+.email-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.email-form input {
+    padding: 15px;
+    font-size: 16px;
+    width: 350px;
+    border: 1px solid white;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+.email-form button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.faq {
+    padding: 25px 12%;
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.faq h2 {
+    font-weight: -500;
+    font-size: 40px;
+}
+
+.faques {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.faques li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.faques li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.faques .content {
+    background-color: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.faques input[type="radio"]:checked+label+.content {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.faques input[type="radio"]:checked+label::after {
+    transform: rotate(135deg);
+}
+
+.faq .email-signup {
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+.faq small {
+    font-size: 13px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 5%;
+    }
+    .logo {
+        width: 100px;
+    }
+    .page-content h1 {
+        font-size: 2rem;
+    }
+    .page-content h2 {
+        font-size: 1.2rem;
+    }
+    .email-form input {
+        width: 100%;
+    }
+    .email-form {
+        flex-direction: column;
+        align-items: center;
+    }
+    .email-form button {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .page-content {
+        max-width: 1000px;
+    }
+    .page-content h1 {
+        font-size: 3.5rem;
+    }
+    .page-content h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* -----small screen----- */
+@media only screen and (max-width:600px) {
+    .faq h2 {
+        font-size: 20px;
+    }
+
+    .faques .content {
+        font-size: 14px;
+    }
+
+    .faques li label {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    label::after {
+        font-size: 22px;
+    }
+}

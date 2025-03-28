@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="sign.css">
+    <link rel="shortcut icon" href="https://www.netflix.com/in/favicon.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="banner">
+        <a href="landing.html">
+            <img class="netflix" src="assets/NetflixLogo.png" alt="Netflix Logo">
+        </a>
+    </div>
+    <div id="video-container">
+        <video id="background-video" autoplay muted loop>
+            <source src="assets/Netflix.mp4" type="video/mp4">
+        </video>
+    </div>
+    <main>
+        <div id="netflix-logo">
+            <img src="assets/NetflixLogo.png">
+        </div>
+
+        <div id="content">
+            <div class="pics">
+                <div class="wrapper">
+                    <form action="">
+                        <h1>Sign In</h1>
+                        <div class="input-box" id="input1">
+                            <input type="text" required>
+                            
+                            <label>Email or phone number</label>
+
+                        </div>
+                        <div class="input-box" id="input2">
+                            <input type="password" required>
+                           
+                            <label>Password</label>
+
+                        </div>
+
+                        <a href="movies.html" class="btn" id="signInBtn">Sign In</a>
+
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">Remember Me</label>
+                            <a href="#">Need help?</a>
+                        </div>
+
+                        <div class="register-link">
+                            <p>New to Netflix? <a href="#">Sign up now</a></p>
+                        
+                            <div class="register">
+                            <p>This page is protected by Google reCAPTCHA to ensure you're not a bot.<a href="#">Learn more.</a></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
